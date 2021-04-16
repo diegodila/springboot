@@ -15,6 +15,24 @@ inversao de controle
 que tem como principio remover do programador a responsabilidade dele criar a instancia dos seus objetos, dessa forma estamos passando a responsabilidade para um software, que é chamado de container o qual implementa os padroes de injeção dependencias e inversao de controle
 o spring nos facilita trabalhar com container pois ele ja tem essa implementação 
 ------------------------------------------------------
+A03-160421
+bean são as classes os quais voce passa a responsabilidade do gerenciamento dela para o spring
+e para passar para o spring o 
+
+@Component
+É uma anotação básica para criar qualquer tipo de bean gerenciado pelo Spring Framework.
+Normalmente usada quando não se define um bean como @Repository ou @Service
+
+@Repository
+Define um bean como sendo do tipo persistente para uso em classes de acesso a banco de
+dados. A partir desta anotação o Spring pode usar recursos referentes a persistência, como
+tratar as exceções específicas para este fim
+
+@Service
+Usado para classes do tipo serviço (Service Layer), que possuem, por
+exemplo, regras de negócios.
+
+
 ------------------------------------------------------
 ------------------------------------------------------
 ------------------------------------------------------
