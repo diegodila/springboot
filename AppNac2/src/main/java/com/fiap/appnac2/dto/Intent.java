@@ -1,26 +1,43 @@
 package com.fiap.appnac2.dto;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 public class Intent implements Serializable {
 
     private static final long serialVersionUID = 1L;
     Long id;
+    @NotBlank
     private String name;
+    @NotBlank
     private String adress;
+    @NotBlank
     private String number;
+    @NotBlank
     private String city;
+    @NotBlank
     private String state;
+    @NotBlank
     private String cep;
+    @NotBlank
     private String email;
+    @NotBlank
     private String contact;
+    @NotBlank
     private String socialNumber;
+    @NotBlank
     private String generalNumber;
+    @NotBlank
     private String birthDate;
+    @NotBlank
     private String category;
+    @NotNull
     private double intentValue;
+    @NotNull
     private int quantity;
+    @NotNull
     private double salary;
 
     public String getNumber() {
