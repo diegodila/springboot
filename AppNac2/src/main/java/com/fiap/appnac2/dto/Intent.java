@@ -9,30 +9,43 @@ public class Intent implements Serializable {
 
     private static final long serialVersionUID = 1L;
     Long id;
+
     @NotBlank(message = "Informe seu Nome")
     private String name;
+
     @NotBlank(message = "Informe seu endereço")
     private String adress;
+
     @NotBlank(message = "Informe o numero da sua casa")
     private String number;
+
     @NotBlank(message = "Informe sua cidade")
     private String city;
+
     @NotBlank(message = "Informe seu estado")
     private String state;
+
     @NotBlank(message = "Informe seu CEP.")
     private String cep;
+
     @NotBlank(message = "Informe seu email")
     private String email;
+
     @NotBlank(message = "Informe seu telefone")
     private String contact;
+
     @NotBlank(message = "Informe seu CPF.")
     private String socialNumber;
+
     @NotBlank(message = "Informe seu RG.")
     private String generalNumber;
+
     @NotBlank(message = "Informe a data de nascimento.")
     private String birthDate;
+
     @NotBlank(message = "Informe a categoria de financiamento")
     private String category;
+
     @NotNull(message = "Informe a sua intenção de financiamento.")
     private double intentValue;
     @NotNull(message = "Informe a quantidade de parcelas")
