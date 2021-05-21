@@ -59,6 +59,14 @@ public class IntentServiceImpl implements IntentService {
             dto.setCategory(intentEntity.getCategory());
             dto.setIntentValue(intentEntity.getIntentValue());
             dto.setQuantity(intentEntity.getQuantity());
+
+            dto.setCep(intentEntity.getCep());
+            dto.setCity(intentEntity.getCity());
+            dto.setEmail(intentEntity.getEmail());
+            dto.setState(intentEntity.getState());
+            dto.setNumber(intentEntity.getNumber());
+            dto.setSalary(intentEntity.getSalary());
+
             listDto.add(dto);
         }
         return listDto;
@@ -78,6 +86,13 @@ public class IntentServiceImpl implements IntentService {
         entity.setIntentValue(intent.getIntentValue());
         entity.setQuantity(intent.getQuantity());
 
+        entity.setCep(intent.getCep());
+        entity.setCity(intent.getCity());
+        entity.setEmail(intent.getEmail());
+        entity.setState(intent.getState());
+        entity.setNumber(intent.getNumber());
+        entity.setSalary(intent.getSalary());
+
         return entity;
     }
 
@@ -94,6 +109,14 @@ public class IntentServiceImpl implements IntentService {
         intent.setCategory(entity.getCategory());
         intent.setIntentValue(entity.getIntentValue());
         intent.setQuantity(entity.getQuantity());
+
+        intent.setCep(entity.getCep());
+        intent.setCity(entity.getCity());
+        intent.setEmail(entity.getEmail());
+        intent.setState(entity.getState());
+        intent.setNumber(entity.getNumber());
+        intent.setSalary(entity.getSalary());
+
 
         return intent;
     }

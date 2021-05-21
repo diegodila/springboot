@@ -9,6 +9,11 @@ public class Intent implements Serializable {
     Long id;
     private String name;
     private String adress;
+    private String number;
+    private String city;
+    private String state;
+    private String cep;
+    private String email;
     private String contact;
     private String socialNumber;
     private String generalNumber;
@@ -16,6 +21,55 @@ public class Intent implements Serializable {
     private String category;
     private double intentValue;
     private int quantity;
+    private double salary;
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
 
     public int getQuantity() {
         return quantity;
@@ -96,4 +150,5 @@ public class Intent implements Serializable {
     public void setIntentValue(double intentValue) {
         this.intentValue = intentValue;
     }
+
 }
