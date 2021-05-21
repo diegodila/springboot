@@ -19,30 +19,67 @@
         <div class="form-row">
             <div><input type="hidden"  th:field="*{id}"></div>
 
-            <div class="form-group col-md-6 mt-3">
+            <div class="form-group col-md-7 mt-3">
                 <label for="nome">Name:</label>
                 <input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Client name" th:field="*{name}">
                 <div th:errors="*{name}" class="invalid-feedback"></div>
             </div>
 
-            <div class="form-group col-md-6 mt-3">
+            <div class="form-group row-cols-3 mt-3">
                 <label for="nome">Adress:</label>
                 <input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Complete Adress" th:field="*{adress}">
                 <div th:errors="*{adress}" class="invalid-feedback"></div>
             </div>
 
-            <div class="form-group mt-3">
-                <label for="exampleFormControlTextarea1">Descrição</label>
-                <textarea class="form-control" th:field="*{quantity}" rows="3"></textarea>
+
+            <div class="form-group row-cols-1 mt-3">
+                <label for="nome">Cpf:</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Complete Adress" th:field="*{socialNumber}">
+                <div th:errors="*{socialNumber}" class="invalid-feedback"></div>
             </div>
 
+            <div class="form-group row-cols-1 mt-3">
+                <label for="nome">RG:</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Complete Adress" th:field="*{generalNumber}">
+                <div th:errors="*{generalNumber}" class="invalid-feedback"></div>
+            </div>
 
-            <div class="form-group col-md-2 mt-3">
-                <label for="nome">Quantidade parcelamento:</label>
-                <input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Quantidade parcelamento" th:field="*{quantity}">
+            <div class="form-group row-cols-1 mt-3">
+                <label for="nome">Data de nascimento:</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Complete Adress" th:field="*{birthDate}">
+                <div th:errors="*{birthDate}" class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group row-cols-1 mt-3">
+                <label for="nome">Tipo de financiamento:</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Complete Adress" th:field="*{category}">
+                <div th:errors="*{birthDate}" class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group row-cols-1 mt-3">
+                <label for="nome">Quantidade de parcelamento:</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Complete Adress" th:field="*{quantity}">
                 <div th:errors="*{quantity}" class="invalid-feedback"></div>
             </div>
-        </div>
+
+            <div class="form-group row-cols-md-4">
+                <label for="nome">Value Intention:</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Complete Adress" th:field="*{intentValue}">
+                <div th:errors="*{intentValue}" class="invalid-feedback"></div>
+            </div>
+
+<!--            <div class="form-group mt-3">-->
+<!--                <label for="exampleFormControlTextarea1">Descrição</label>-->
+<!--                <textarea class="form-control" th:field="*{category}" rows="3"></textarea>-->
+<!--            </div>-->
+
+
+<!--            <div class="form-group col-md-2 mt-3">-->
+<!--                <label for="nome">Quantidade parcelamento:</label>-->
+<!--                <input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Quantidade parcelamento" th:field="*{quantity}">-->
+<!--                <div th:errors="*{quantity}" class="invalid-feedback"></div>-->
+<!--            </div>-->
+<!--        </div>-->
 
         <div>
             <button type="submit" class="btn btn-light  mt-3">Salvar</button>

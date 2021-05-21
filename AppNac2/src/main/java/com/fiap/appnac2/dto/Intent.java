@@ -7,11 +7,8 @@ public class Intent implements Serializable {
 
     private static final long serialVersionUID = 1L;
     Long id;
-    @NotBlank
     private String name;
-    @NotBlank
     private String adress;
-    @NotBlank
     private String contact;
     private String socialNumber;
     private String generalNumber;

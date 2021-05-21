@@ -16,7 +16,7 @@
     </div>
     <form th:action="@{/new-intent}">
         <div>
-            <button type="submit" class="btn btn-blue">New Intent</button>
+            <button type="submit" class="btn btn-dark">New Intent</button>
         </div>
     </form>
 
@@ -37,8 +37,7 @@
             <td th:text="${intent.quantity}"></td>
 
             <td class="text-center">
-                <a th:href="@{/produto/{id}(id = ${intent.id})}" class="btn btn-primary">Detalhar</a>
-                <a th:href="@{/produto/excluir/{id}(id = ${intent.id})}" class="btn btn btn-danger">excluir</a>
+                <a th:href="@{/intent/{id}(id = ${intent.id})}" class="btn btn-primary">Detalhar</a>
             </td>
         </tr>
         </tbody>
