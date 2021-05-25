@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Test Register</title>
+</head>
+
+<body>
+	<h1>Open request</h1>
+	<form action="/open_sucess" method="post">
+		<h1><b>Solver Group:</b></h1>
+		<select
+			name="itservice">
+			<option value="hardware" name="hard">Hardware</option>
+			<option value="software" name="soft">Software</option>
+			<option value="cloud" name="cld">Cloud</option>
+			<option value="server"name="serv">Server</option>
+		</select>
+		<label><b>Description:</b></label> <input type="text" name="description">
+		<div class="clearfix">
+			<button type="button" class="cancelbtn">Cancel</button>
+			<button type="submit" class="signupbtn">Open</button>
+		</div>
+	</form>
+</body>
+</html>
