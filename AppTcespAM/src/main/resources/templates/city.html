@@ -12,10 +12,23 @@
           rel="stylesheet"/>
 </head>
 <body>
+<div class="container-fluid bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">TCESP Portal de Transparência</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" th:href="@{/}">Home</a>
+                <a class="nav-item nav-link active" href="#">Cadastro</a>
+            </div>
+        </div>
+    </nav>
+</div>
 <div class="container">
-    <div class="w-auto p-3 mt-3 logo-container">TCESP</div>
     <div>
-        <h1 class="display-6">Cadastro de Cidade</h1>
+        <h1 class="display-6 mt-3 mb-4">Cadastro de Cidade</h1>
     </div>
     <form method="POST" th:object="${city}" th:action="@{/save-city}">
 
@@ -37,7 +50,7 @@
 
         </div>
         <div>
-            <button type="submit" class="btn btn-light  mt-3">Salvar</button>
+            <button type="submit" class="btn btn-success  mt-3">Salvar</button>
         </div>
     </form>
 </div>
