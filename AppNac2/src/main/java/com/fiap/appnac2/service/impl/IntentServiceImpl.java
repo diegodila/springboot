@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class IntentServiceImpl implements IntentService {
+public class    IntentServiceImpl implements IntentService {
 
     @Autowired
     private IntentRepository repository;

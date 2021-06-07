@@ -1,7 +1,6 @@
 package com.fiap.apptcespam.service;
 
 import com.fiap.apptcespam.dto.City;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

@@ -24,8 +24,7 @@
 
             <div class="form-group col-md-6 mt-3">
                 <label for="nome">Nome da Cidade:</label>
-                <input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Nome da cidade do Portal de Transparência"
-                       th:field="*{cityName}">
+                <input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Nome da cidade do Portal de Transparência" th:field="*{cityName}">
                 <div th:errors="*{cityName}" class="invalid-feedback"></div>
             </div>
 

@@ -1,5 +1,6 @@
 package com.fiap.apptcespam.dto;
 
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 public class City implements Serializable {
@@ -8,7 +9,10 @@ public class City implements Serializable {
 
     private Long id;
 
+    @NotBlank(message = "Necessário informar o nome da cidade")
     private String cityName;
+
+    @NotBlank(message = "Necessário informar a url para cadastro")
     private String url;
 
     public Long getId() {

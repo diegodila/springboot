@@ -29,7 +29,7 @@ public class CityController {
     public String saveCity(@Valid City city, BindingResult result, Model model) {
         if(result.hasErrors()) {
             model.addAttribute(city);
-            return "produto";
+            return "city";
         }
         service.saveCity(city);
         return "redirect:/";
