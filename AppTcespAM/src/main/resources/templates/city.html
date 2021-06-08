@@ -13,15 +13,15 @@
 </head>
 <body>
 <div class="container-fluid bg-light">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">TCESP Portal de Transparência</a>
+    <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light">
+        <a class="navbar-brand" th:href="@{/}">TCESP Portal de Transparência</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link" th:href="@{/}">Home</a>
-                <a class="nav-item nav-link active" href="#">Cadastro</a>
+                <a class="nav-item nav-link active" th:href="@{/new-city}">Cadastro</a>
             </div>
         </div>
     </nav>
