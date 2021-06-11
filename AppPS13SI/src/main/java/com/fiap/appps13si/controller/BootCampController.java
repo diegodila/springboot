@@ -9,11 +9,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @Controller
 public class BootCampController {
@@ -24,10 +22,10 @@ public class BootCampController {
     public String saveCity(@Valid BootCamp bootCamp, BindingResult result, Model model) {
         if(result.hasErrors()) {
             model.addAttribute(bootCamp);
-            return "bootCamp";
+            return "redirect:/home#download";
         }
         service.saveBootCamp(bootCamp);
-        return "redirect:/";
+        return "redirect:/home#download";
     }
 
     @GetMapping("/bootcamp/{id}")

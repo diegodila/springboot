@@ -8,7 +8,7 @@ public class BootCamp implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Long id;
-    @NotBlank(message = "Necessário informar o nome da bootcamp")
+    @NotBlank(message = "Necessário informar o nome do bootcamp")
     private String name;
     @NotBlank(message = "Necessário informar a especialidade para cadastro")
     private String especialidade;
