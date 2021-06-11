@@ -22,10 +22,10 @@ public class BootCampController {
     public String saveCity(@Valid BootCamp bootCamp, BindingResult result, Model model) {
         if(result.hasErrors()) {
             model.addAttribute(bootCamp);
-            return "redirect:/home#download";
+            return "register";
         }
         service.saveBootCamp(bootCamp);
-        return "redirect:/home#download";
+        return "redirect:/home";
     }
 
     @GetMapping("/bootcamp/{id}")
