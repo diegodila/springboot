@@ -201,7 +201,62 @@
                 <br />
                 Start building.
             </h2>
-            <a class="btn btn-outline-light py-3 px-4 rounded-pill" th:href="@{/register}" target="_blank">Cadastre seu BootCamp gratuitamente</a>
+            <!--            <a class="btn btn-outline-light py-3 px-4 rounded-pill" th:href="@{/register}" target="_blank">Cadastre seu BootCamp gratuitamente</a>-->
+            <button th:action="@{new-bootcamp}" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Comece gratuitamente</button>
+        </div>
+    </div>
+</section>
+
+<section id="demo" class="collapse card card-body bg-gradient-primary-to-secondary">
+    <div class="card card-body">
+        <h2>Stacked form</h2>
+        <form method="POST" th:object="${tes}" th:action="@{/save-bootcamp}">
+            <div class="form-group">
+                <div><input type="hidden" th:field="*{id}"></div>
+                <div class="form-group col-md-6 mt-3">
+                    <label>Nome:</label>
+                    <input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Nome da cidade do Portal de Transparência" th:field="*{name}">
+                    <div th:errors="*{name}" class="invalid-feedback"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Nome da cidade do Portal de Transparência" th:field="*{especialidade}">
+                <div th:errors="*{especialidade}" class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Nome da cidade do Portal de Transparência" th:field="*{duracao}">
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                </label>
+            </div>
+            <button type="submit" class="btn bg-gradient-primary-to-secondary">Salvar</button>
+        </form>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover table-borderless rounded-3 table-curved">
+            <thead>
+            <tr>
+                <th scope="col">Cidade</th>
+                <th scope="col">URL</th>
+            </tr>
+            </thead>
+            <tbody class="table-primary">
+            <tr th:each="v_bootcamp : ${bootcamps}">
+                <td th:text="${v_bootcamp.name}"></td>
+                <td th:text="${v_bootcamp.especialidade}"></td>
+                <td th:text="${v_bootcamp.duracao}"></td>
+                <td class="text-center">
+                    <a th:href="@{/bootcamp/{id}(id = ${v_bootcamp.id})}" class="btn btn-primary">editar</a>
+                    <a th:href="@{/bootcamp/delete/{id}(id = ${v_bootcamp.id})}" class="btn btn-danger">excluir</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </section>
 <!-- App badge section-->
 <section class="bg-gradient-primary-to-secondary" id="download">
@@ -215,19 +270,6 @@
 </section>
 <!-- Footer-->
 <footer class="bg-black text-center py-5">
-    <p>
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Link with href
-        </a>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            Button with data-target
-        </button>
-    </p>
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        </div>
-    </div>
     <div class="container px-5">
         <div class="text-white-50 small">
             <div class="mb-2">&copy; Your Website 2021. All Rights Reserved.</div>
