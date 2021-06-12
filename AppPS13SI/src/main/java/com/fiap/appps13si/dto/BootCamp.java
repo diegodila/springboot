@@ -1,6 +1,7 @@
 package com.fiap.appps13si.dto;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 public class BootCamp implements Serializable {
@@ -12,6 +13,7 @@ public class BootCamp implements Serializable {
     private String name;
     @NotBlank(message = "Necessário informar a especialidade para cadastro")
     private String especialidade;
+    @NotNull(message = "Necessário informar uma duração.")
     private double duracao;
 
     public Long getId() {
