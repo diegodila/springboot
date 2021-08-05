@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public interface listCarrosEntityervice {
+public interface CarroService {
 
     CarroDto save(CarroDto carroDto);
     List<CarroDto> listAll();

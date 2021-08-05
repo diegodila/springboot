@@ -3,7 +3,7 @@ package com.fiap.app08_1.service.impl;
 import com.fiap.app08_1.dto.CarroDto;
 import com.fiap.app08_1.entity.Carro;
 import com.fiap.app08_1.repository.CarroRepository;
-import com.fiap.app08_1.service.listCarrosEntityervice;
+import com.fiap.app08_1.service.CarroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class listCarrosEntityerviceImpl implements listCarrosEntityervice {
+public class CarroServiceImpl implements CarroService {
     @Autowired
     CarroRepository repository;
 
@@ -24,7 +24,7 @@ public class listCarrosEntityerviceImpl implements listCarrosEntityervice {
     @Override
     public List<CarroDto> listAll() {
         List<Carro> carro = repository.findAll();
-        List<CarroDto> carroDto = fromToService(carro);
+        List<CarroDto> carroDto = fromToDto(carro);
         return carroDto;
     }
 
@@ -39,7 +39,7 @@ public class listCarrosEntityerviceImpl implements listCarrosEntityervice {
         repository.deleteById(id);
     }
 
-    List<CarroDto> fromToService(List<Carro> listCarrosEntity){
+    List<CarroDto> fromToDto(List<Carro> listCarrosEntity){
         List<CarroDto> listCarrosDto = new ArrayList<>();
         for (Carro carroEntity:listCarrosEntity) {
             CarroDto carroDto = new CarroDto();
