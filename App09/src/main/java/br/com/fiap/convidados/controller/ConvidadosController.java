@@ -26,7 +26,7 @@ public class ConvidadosController {
 		if(!result.hasErrors()) {
 			service.salvarConvidados(convidadoDto);	
 			return "redirect:/convidados";
-		}			
+		}
 		
 		return "redirect:/convidados";
 	}

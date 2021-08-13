@@ -15,7 +15,7 @@ public class ConvidadosDto {
 	private String email;
 
 	@NotBlank
-		private String acompanhante;
+	private String acompanhante;
 
 	public Long getId() {
 		return id;

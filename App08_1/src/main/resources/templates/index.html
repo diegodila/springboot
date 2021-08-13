@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+          rel="stylesheet" />
+    <link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}"
+          rel="stylesheet" />
+    <title>Test</title>
+</head>
+<body>
+<h1>Diego</h1>
+    </div>
+        <form class="card-body" method="POST" th:object="${carroDto}"
+              th:action="@{/cadastrar}">
+            <div class="row">
+                <div class="form-group mb-3 col-sm">
+                    <label>Modelo</label>
+                    <input type="text" class="form-control mt-3" placeholder="Modelo do carro"  th:field="*{modelo}">
+                    <div th:errors="*{modelo}" class="invalid-feedback"></div>
+                </div>
+                <div class="form-group mb-3 col-sm">
+                    <label>Ano</label>
+                    <input type="text" class="form-control mt-3" placeholder="Ano do carro" th:field="*{ano}">
+                </div>
+                <div class="form-group mb-3 col-sm">
+                    <label>Cor</label>
+                    <input type="text" class="form-control mt-3" placeholder="Cor do carro" th:field="*{cor}">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-secondary">Adicionar</button>
+        </form>
+    </div>
+<table>
+    <thead>
+    <tr>
+        <td>diego</td>
+        <td>dsiisd</td>
+        <td>dsidiosd</td>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="carro : ${carrosList}">
+            <td th:text="${carro.id}"></td>
+            <td th:text="${carro.modelo}"></td>
+            <td th:text="${carro.ano}"></td>
+        </tr>
+    </tbody>
+
+</table>
+</body>
+</html >

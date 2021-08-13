@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface CarroService {
 
     CarroDto save(CarroDto carroDto);

@@ -1,0 +1,3 @@
+colocar na applications properties o datasource. password=, name=sa, url=jdbc:h2:mem:testdb
+
+a interface service não tem annotation @service
